@@ -1,0 +1,78 @@
+/* ## Estilos EasyBuyAI ## */
+
+/* Estilos del Modal EasyBuyAI */
+
+.modal-content {
+  background-color: rgb(252, 239, 253);
+  border-radius: 20px;
+}
+
+.modal-content .modal-header {
+  color: #ffffff;
+  background-color: #59378A;
+}
+
+.modal-body {
+  color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-content .modal-header h5 {
+    font-size: 15px;
+  }
+}
+
+/* Estilos del Boton Flotante de EasyBuyAI */
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 130px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #59378A;
+    /* Color de fondo de WhatsApp */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .floating-button img {
+    width: 120px;
+    /* Tamaño del icono de WhatsApp */
+    height: auto;
+    color: white;
+    /* Color del icono */
+  }
+
+
+
+/* Estilos del Spinner */
+
+.spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Asegura que esté adelante de todo */
+}
+
+.spinner {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #59378A; /* Primer color */
+    border-bottom-color: #7c4dff; /* Primer color */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+}
+

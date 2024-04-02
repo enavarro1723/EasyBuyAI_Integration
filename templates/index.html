@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>EasyBuyAI Integration</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+
+  <!-- Styles solo para el material (No se necesitan) -->
+  <link rel="stylesheet" href="{{url_for('static', filename='css/mdb.min.css')}}">
+
+  <!-- EasyBuyAI Styles -->
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+</head>
+
+<body>
+
+  <!-- Page_Content -->
+  <section class="Page_Content">
+
+    <!-- EasyBuyAI Floating-Button -->
+    <div class="floating-button">
+      <a onclick="openSweetAlertToCompare()">
+        <img src="{{ url_for('static', filename='img/easybuyai-blanco.png') }}" alt="easybuy" style="cursor: pointer; "/>
+      </a>
+    </div>
+
+    
+    <div class="container">
+
+      <!-- EasyBuyAI Spinner de Carga Esperando la Respuesta -->
+      <div id="spinner" class="spinner-container" style="display: none;">
+        <div class="spinner"></div>
+      </div>
+
+
+      <div class="row">
+        
+        <!-- Ejemplo de Dos Laptops para comparar -->        
+
+        <div class="row justify-content-center mb-3">
+          <div class="col-md-12">
+            <div class="card-box-div shadow-0 border rounded-3">
+              <div class="card-body">
+                <div class="row g-0">
+                  <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                    <div class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+                      <img src="{{ url_for('static', filename='img/D_NQ_NP_693497-MLA48980724534_012022-O.webp') }}"
+                        class="w-100">
+                      <a href="#!">
+                        <div class="hover-overlay">
+                          <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-md-5 col-sm-7">
+                    <h5 class="card-title">Ultrabook HP 15-dy2091wm plata 15.6", Intel Core i3 1115G4 8GB de RAM 256GB
+                      SSD, Intel UHD
+                      Graphics Xe G4 48EUs 1366x768px Windows 10 Home</h5>
+                    
+
+                    <p class="text mb-4 mb-md-0 card-description">The HP 15-dy2091wm laptop is a solution for both work and study, as well as for entertainment. Being portable, the desk will no longer be your only workspace, opening doors to other environments, whether at home or in the office.</p>
+                  </div>
+                  <div class="col-xl-3 col-md-3 col-sm-5">
+                    <div class="d-flex flex-row align-items-center mb-1">
+                      <h4 class="mb-1 me-1 card-price">$569,50</h4>
+                      <span class="text-danger"><s>$631.99</s></span>
+                    </div>
+                    <div class="mt-4">
+                      <button class="btn btn-primary shadow-0" type="button">Buy this</button>
+                      <!-- CheckBox para seleccionar el producto -->        
+
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="1" id="producto1">
+                        <label class="form-check-label" for="producto1">
+                          Select
+
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mb-3">
+          <div class="col-md-12">
+            <div class="card-box-div shadow-0 border rounded-3">
+              <div class="card-body">
+                <div class="row g-0">
+                  <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                    <div class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+                      <img src="{{ url_for('static', filename='img/D_NQ_NP_674409-MLA74807965335_022024-O.webp') }}"
+                        class="w-100">
+                      <a href="#!">
+                        <div class="hover-overlay">
+                          <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-md-5 col-sm-7">
+                    <h5 class="card-title">Notebook Dell Vostro 3405 negra 14", AMD Ryzen 5 3450U 16GB de RAM 512GB
+                      SSD, AMD Radeon Vega
+                      8 60 Hz 1366x768px Windows 10 Pro
+
+                    </h5>
+                    
+
+                    <p class="text mb-4 mb-md-0 card-description">Dell devices stand out for providing real solutions for each of your needs. Whether for connecting, entertaining, working, or collaborating online, you can do so securely from anywhere and at any time. High-impact visual display Its 14" LED screen with a resolution of 1366x768 px will provide you with more vibrant and defined colors. Your favorite movies and series will come to life, gaining quality and definition in every detail.</p>
+                  </div>
+                  <div class="col-xl-3 col-md-3 col-sm-5">
+                    <div class="d-flex flex-row align-items-center mb-1">
+                      <h4 class="mb-1 me-1 card-price">$599,00</h4>
+                      <span class="text-danger"><s>$625.99</s></span>
+                    </div>
+                    <div class="mt-4">
+                      <button class="btn btn-primary shadow-0" type="button">Buy this</button>
+              
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="2" id="producto2">
+                        <label class="form-check-label" for="producto2">
+                          Select
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- Modal Necesario Para la Response -->
+  <div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="responseModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="responseModalLabel">Suggestion:</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        </div>
+        <div class="modal-body">
+          <p id="apiResponse"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Request para utilizar los servicios de EasyBuyAI -->
+  <script src="{{url_for('static', filename='/js/script.js')}}"></script>
+
+  <!-- Necesario para el funcionamiento del SweetAlert del boton EasyBuyAI -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Jquery necesario para el funcionamiento EasyBuyAI -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Carga Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para centrar el modal cuando se muestra  -->
+  <script>
+    $(document).ready(function () {
+      // Centrar verticalmente el modal al abrirlo
+      $('#responseModal').on('show.bs.modal', function (e) {
+        var modal = $(this);
+        var modalDialog = modal.find('.modal-dialog');
+        var modalContent = modal.find('.modal-content');
+
+        // Obtener la altura de la ventana gráfica
+        var windowHeight = $(window).height();
+
+        // Obtener la altura del contenido del modal
+        var modalContentHeight = modalContent.outerHeight();
+
+        // Calcular la posición vertical para centrar el modal
+        var topPosition = (windowHeight - modalContentHeight) / 3;
+
+        // Establecer la posición superior del modal
+        modalDialog.css('margin-top', topPosition + 'px');
+      });
+    });
+  </script>
+
+</body>
+
+</html>
