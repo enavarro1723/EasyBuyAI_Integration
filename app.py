@@ -14,7 +14,11 @@ def send_request():
 
     # Verificar si se han recibido datos
     if not data:
-        return jsonify({'error': 'No se proporcionaron datos en la solicitud'}), 400
+        return jsonify(
+            {
+                'error': 'No se proporcionaron datos en la solicitud'
+            }
+        ), 400
 
     # Configurar los datos para enviar la solicitud a RapidAPI
     rapidapi_url = 'https://easybuyai.p.rapidapi.com/BestProduct/'
@@ -30,7 +34,12 @@ def send_request():
         rapidapi_data = response.json()
         return jsonify(rapidapi_data)
     except requests.exceptions.RequestException as e:
-        return jsonify({'error': f'Error al enviar la solicitud a RapidAPI: {str(e)}'}), 500
+        return jsonify(
+            {
+                'error': f'Error al enviar la solicitud a RapidAPI: {str(e)}'
+            }
+        ), 500
+
 
 @app.route('/', methods=['GET'])
 def home():
