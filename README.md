@@ -20,7 +20,7 @@ Este es un proyecto diseñado para facilitar la integración de nuestro Asistent
 2. Instala las dependencias:
     ```bash
     pip install -r requirements.txt
-3. LISTO! Ejecutemos el proyecto!
+3. Ejecutemos el proyecto!
     ```bash
     python .\PATH\TO\app.py 
 4. ¡Listo! ¡Ya puedes chequear el proyecto ingresando http://127.0.0.1:5000/ en tu Navegador!
